@@ -7,7 +7,7 @@ Repository containing my solution to Oracle Instructed Java8 MOOC on an introduc
 &nbsp;
 
 
-Although Main code is written in Java8, my unit tests have all been written in Groovy using Spock Unit Testing Framework, why? cause Grovayyyy! :) 
+Although Main code is written in Java8, my unit tests have all been written in Groovy using Spock Unit Testing Framework, why? cause *Grovayyyy!* :) 
 
 &nbsp;
 
