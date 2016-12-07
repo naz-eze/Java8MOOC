@@ -1,6 +1,7 @@
 package io.github.nazcompile;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Lesson1 {
 
@@ -17,10 +18,14 @@ public class Lesson1 {
    * Create a string that consists of the first letter of each word in the list
    * of Strings provided.
    */
-  private String exercise1(List<String> list) {
-	 
-    /* YOUR CODE HERE */
-	 return null;
+  public String exercise1(List<String> list) {
+	  String result = null;
+	  
+	  result = list.stream()
+			  	   .map(str -> str.substring(0, 1))
+			  	   .collect(Collectors.joining());
+
+	  return result;
   }
 
 }
