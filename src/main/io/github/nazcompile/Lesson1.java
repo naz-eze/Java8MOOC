@@ -34,9 +34,13 @@ public class Lesson1 {
    * Remove the words that have odd lengths from the list.
    */
   public List<String> exercise2(List<String> list) {
+	  List<String> result = null;
+	  
+	  result = list.stream()
+			  		.filter(str -> str.length() % 2 == 0)
+			  		.collect(Collectors.toList());
 
-    /* YOUR CODE HERE */
-    return null;
+	  return result;
   }
 
 }
