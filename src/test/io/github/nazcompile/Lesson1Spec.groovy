@@ -19,9 +19,9 @@ class Lesson1Spec extends Specification {
 			result == expected
 		
 		where:
-			list			|		expected
+			list				|		expected
 			["alpha", "bravo", "charlie"]	|		"abc"
-			["Romeo", "Juliet"]	|		"RJ"
+			["Romeo", "Juliet"]		|		"RJ"
 			["Never", "accept", "zero"]	|		"Naz"
 			
 	}
@@ -52,9 +52,9 @@ class Lesson1Spec extends Specification {
 			result == expected
 		
 		where:
-			list			|		expected
+			list				|		expected
 			["alpha", "bravo", "charlie"]	|		["ALPHA", "BRAVO", "CHARLIE"]
-			["Romeo", "Juliet"]	|		["ROMEO", "JULIET"]	
+			["Romeo", "Juliet"]		|		["ROMEO", "JULIET"]	
 			["Never", "accept", "zero"]	|		["NEVER", "ACCEPT", "ZERO"]	
 			
 	}
