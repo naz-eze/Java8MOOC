@@ -27,5 +27,16 @@ public class Lesson1 {
 
 	  return result;
   }
+  
+  /**
+   * Exercise 2
+   *
+   * Remove the words that have odd lengths from the list.
+   */
+  public List<String> exercise2(List<String> list) {
+
+    /* YOUR CODE HERE */
+    return null;
+  }
 
 }

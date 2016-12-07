@@ -25,7 +25,21 @@ class Lesson1Spec extends Specification {
 			["Never", "accept", "zero"]		|		"Naz"
 			
 	}
-
+	
+	def "Should remove words with odd lengths in the list"() {
+		when:
+			def result = lesson1.exercise2(list)
+		
+		then:
+			result == expected
+		
+		where:
+			list							|		expected
+			["echo", "bravo", "charlie"]	|		["echo"]
+			["delta", "foxtrot", "alpha"]	|		[""]
+			["Naz", "love", "Groovy"]		|		["love", "Groovy"]
+			
+	}
 	
 	
 }
