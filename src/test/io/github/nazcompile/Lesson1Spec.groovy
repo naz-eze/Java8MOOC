@@ -44,6 +44,21 @@ class Lesson1Spec extends Specification {
 			
 	}
 	
+	def "Should replace every word in the list with its uppercase equivalent"() {
+		when:
+			def result = lesson1.exercise3(list)
+		
+		then:
+			result == expected
+		
+		where:
+			list							|		expected
+			["alpha", "bravo", "charlie"]	|		["ALPHA", "BRAVO", "CHARLIE"]
+			["Romeo", "Juliet"]				|		["ROMEO", "JULIET"]	
+			["Never", "accept", "zero"]		|		["NEVER", "ACCEPT", "ZERO"]	
+			
+	}
+	
 	
 }
 

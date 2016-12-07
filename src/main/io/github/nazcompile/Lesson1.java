@@ -42,5 +42,17 @@ public class Lesson1 {
 
 	  return result;
   }
+  
+  /**
+   * Exercise 3
+   *
+   * Replace every word in the list with its upper case equivalent.
+   */
+  public List<String> exercise3(List<String> list) {
+	  List<String> result = null;
+	  
+    /* YOUR CODE HERE */
+	  return result;
+  }
 
 }
