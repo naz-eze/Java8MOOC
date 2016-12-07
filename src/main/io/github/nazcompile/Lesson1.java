@@ -51,7 +51,10 @@ public class Lesson1 {
   public List<String> exercise3(List<String> list) {
 	  List<String> result = null;
 	  
-    /* YOUR CODE HERE */
+	  result = list.stream()
+			  	   .map(String::toUpperCase)
+			  	   .collect(Collectors.toList());
+	  
 	  return result;
   }
 
