@@ -22,8 +22,8 @@ public class Lesson1 {
 	  String result = null;
 	  
 	  result = list.stream()
-			  	   .map(str -> str.substring(0, 1))
-			  	   .collect(Collectors.joining());
+			  .map(str -> str.substring(0, 1))
+			  .collect(Collectors.joining());
 
 	  return result;
   }
@@ -37,8 +37,8 @@ public class Lesson1 {
 	  List<String> result = null;
 	  
 	  result = list.stream()
-			  		.filter(str -> str.length() % 2 == 0)
-			  		.collect(Collectors.toList());
+			  .filter(str -> str.length() % 2 == 0)
+			  .collect(Collectors.toList());
 
 	  return result;
   }
@@ -52,8 +52,8 @@ public class Lesson1 {
 	  List<String> result = null;
 	  
 	  result = list.stream()
-			  	   .map(String::toUpperCase)
-			  	   .collect(Collectors.toList());
+			  .map(String::toUpperCase)
+			  .collect(Collectors.toList());
 	  
 	  return result;
   }
