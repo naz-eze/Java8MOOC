@@ -59,6 +59,19 @@ class Lesson1Spec extends Specification {
 			
 	}
 	
+	def "Should convert every key-pair value into a string and append them all"() {
+		when:
+			def result = lesson1.exercise4(map)
+		
+		then:
+			result == expected
+		
+		where:
+			map						|		expected
+			["c":3, "b":2, "a":1] as TreeMap	|		["c3b2a1"]
+			["N":4, "z":0, "0":1] as TreeMap	|		["Naz001"]
+			
+	}
 	
 }
 

@@ -1,6 +1,7 @@
 package io.github.nazcompile;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -50,6 +51,18 @@ public class Lesson1 {
 	  list.replaceAll(String::toUpperCase);
 	  
 	  return list;
+  }
+  
+  /**
+   * Exercise 4
+   *
+   * Convert every key-value pair of the map into a string and append them all
+   * into a single string, in iteration order.
+   */
+  public String exercise4(Map<String, Integer> map) {
+ 
+    /* YOUR CODE HERE */
+	  return null;
   }
 
 }
