@@ -63,9 +63,9 @@ public class Lesson1 {
 		String result = null;
 		
 		result = map.entrySet()
-			.stream()
-			.map(mapper -> mapper.getKey() + mapper.getValue())
-			.collect(Collectors.joining());
+				.stream()
+				.map(mapper -> mapper.getKey() + mapper.getValue())
+				.collect(Collectors.joining());
 
 		return result;
 	}
