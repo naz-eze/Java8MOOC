@@ -73,6 +73,11 @@ class Lesson1Spec extends Specification {
 			
 	}
 	
+	def "Not a Test, just used to run exercise 5"() {
+		expect:
+			lesson1.exercise5()
+	}
+	
 }
 
 

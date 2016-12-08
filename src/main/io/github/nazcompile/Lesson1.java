@@ -1,5 +1,6 @@
 package io.github.nazcompile;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
@@ -69,5 +70,17 @@ public class Lesson1 {
 
 		return result;
 	}
+	
+	/**
+	   * Exercise 5
+	   *
+	   * Create a new thread that prints the numbers from the list.
+	   */
+	  public void exercise5() {
+		  List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+		  
+		  Runnable printList = () -> { System.out.println(list);};
+		  new Thread(printList).run();
+	  }
 
 }
