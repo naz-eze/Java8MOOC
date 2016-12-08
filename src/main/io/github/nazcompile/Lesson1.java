@@ -1,6 +1,7 @@
 package io.github.nazcompile;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Lesson1 {
@@ -34,13 +35,10 @@ public class Lesson1 {
    * Remove the words that have odd lengths from the list.
    */
   public List<String> exercise2(List<String> list) {
-	  List<String> result = null;
+	  Predicate<String> oddCheck = str -> (str.length() % 2 != 0);
+	  list.removeIf(oddCheck);
 	  
-	  result = list.stream()
-			  .filter(str -> str.length() % 2 == 0)
-			  .collect(Collectors.toList());
-
-	  return result;
+	  return list;
   }
   
   /**
@@ -49,13 +47,9 @@ public class Lesson1 {
    * Replace every word in the list with its upper case equivalent.
    */
   public List<String> exercise3(List<String> list) {
-	  List<String> result = null;
+	  list.replaceAll(String::toUpperCase);
 	  
-	  result = list.stream()
-			  .map(String::toUpperCase)
-			  .collect(Collectors.toList());
-	  
-	  return result;
+	  return list;
   }
 
 }
