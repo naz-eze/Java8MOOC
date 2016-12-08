@@ -60,9 +60,14 @@ public class Lesson1 {
 	 * into a single string, in iteration order.
 	 */
 	public String exercise4(Map<String, Integer> map) {
+		String result = null;
+		
+		result = map.entrySet()
+					.stream()
+					.map(mapper -> mapper.getKey() + mapper.getValue())
+					.collect(Collectors.joining());
 
-
-		return null;
+		return result;
 	}
 
 }
