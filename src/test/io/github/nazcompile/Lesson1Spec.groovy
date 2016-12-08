@@ -68,8 +68,8 @@ class Lesson1Spec extends Specification {
 		
 		where:
 			map					|		expected
-			["c":3, "b":2, "a":1] as TreeMap		|		"a1b2c3"
-			["N":4, "z":0, "0":0] as TreeMap		|		"00N4z0"
+			["c":3, "b":2, "a":1] as TreeMap		|	"a1b2c3"
+			["N":4, "z":0, "0":0] as TreeMap		|	"00N4z0"
 			
 	}
 	
