@@ -21,8 +21,11 @@ class Lesson2Spec extends Specification {
 			list				|		expected
 			["The", "Quick", "BROWN"]	|		["the", "quick", "brown"]
 			["Fox", "Jumped", "Over"]	|		["fox", "jumped", "over"]
-			["The", "LAZY", "DOG"]		|		["the", "lazy", "dog"]
-			
+			["The", "LAZY", "DOG"]		|		["the", "lazy", "dog"]		
+	}
+	
+	def "Should return new list containing strings with an odd length"() {
+		
 	}
 
 }

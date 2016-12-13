@@ -28,6 +28,20 @@ public class Lesson2 {
 		  System.out.println(result);
 		  return result;
 	  }
+	  
+	  /**
+	   * Exercise 2
+	   *
+	   * Modify exercise 1 so that the new list only contains strings that have an
+	   * odd length
+	 * @return 
+	   */
+	  public List<String> exercise2(List<String> list ) {
+	    List<String> result = null; 
+	    
+	    /* YOUR CODE HERE */
+	    return result;
+	  }
 
 
 }
