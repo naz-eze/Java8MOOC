@@ -63,8 +63,10 @@ public class Lesson2 {
 	    				 .collect(Collectors.joining("-"));
 	    } else {
 	    	result = "List should be greater than 4";
+	    	//could possibly throw an exception here but out of scope for the exercise
 	    }
 
+	    System.out.println(result);
 	    return result;
 	  }
 
