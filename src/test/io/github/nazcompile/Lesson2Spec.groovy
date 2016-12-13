@@ -25,7 +25,17 @@ class Lesson2Spec extends Specification {
 	}
 	
 	def "Should return new list containing strings with an odd length"() {
+		when:
+			def result = lesson2.exercise2(list)
 		
+		then:
+			result == expected
+		
+		where:
+			list				|		expected
+			["The", "Quick", "BROWN"]	|		["the", "quick", "brown"]
+			["Fox", "Jumped", "Over"]	|		["fox"]
+			["The", "LAZY", "DOG"]		|		["the", "dog"]
 	}
 
 }

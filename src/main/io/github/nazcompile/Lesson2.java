@@ -37,9 +37,13 @@ public class Lesson2 {
 	 * @return 
 	   */
 	  public List<String> exercise2(List<String> list ) {
-	    List<String> result = null; 
+	    List<String> result = null;
+	    result = list.stream()
+			    	  .filter(str -> (str.length() % 2 != 0))
+			    	  .map(String::toLowerCase)
+			    	  .collect(Collectors.toList());
 	    
-	    /* YOUR CODE HERE */
+	    System.out.println(result);
 	    return result;
 	  }
 
