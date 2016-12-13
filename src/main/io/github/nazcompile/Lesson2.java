@@ -56,8 +56,15 @@ public class Lesson2 {
 	   */
 	  public String exercise3(List<String> list) {
 	    String result = null;
+	    
+	    if (list.size() >= 4) {
+	    	result = list.stream()
+	    				 .filter(str -> list.subList(1, 4).contains(str)) 
+	    				 .collect(Collectors.joining("-"));
+	    } else {
+	    	result = "List should be greater than 4";
+	    }
 
-	    /* YOUR CODE HERE */
 	    return result;
 	  }
 
