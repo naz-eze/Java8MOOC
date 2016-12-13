@@ -1,6 +1,7 @@
 package io.github.nazcompile;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Lesson2 {
 	
@@ -20,9 +21,12 @@ public class Lesson2 {
 	   */
 	  public List<String> exercise1(List<String> list) {
 		  List<String> result = null;
-
-	    /* YOUR CODE HERE */
-		 return result;
+		  result = list.stream()
+				  .map(String::toLowerCase)
+				  .collect(Collectors.toList());
+		  
+		  System.out.println(result);
+		  return result;
 	  }
 
 
