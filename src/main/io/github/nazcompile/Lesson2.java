@@ -46,6 +46,20 @@ public class Lesson2 {
 	    System.out.println(result);
 	    return result;
 	  }
+	  
+	  /**
+	   * Exercise 3
+	   *
+	   * Join the second, third and forth strings of the list into a single string,
+	   * where each word is separated by a hyphen (-). Print the resulting string.
+	 * @return 
+	   */
+	  public String exercise3(List<String> list) {
+	    String result = null;
+
+	    /* YOUR CODE HERE */
+	    return result;
+	  }
 
 
 }

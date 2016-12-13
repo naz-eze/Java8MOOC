@@ -37,5 +37,9 @@ class Lesson2Spec extends Specification {
 			["Fox", "Jumped", "Over"]	|		["fox"]
 			["The", "LAZY", "DOG"]		|		["the", "dog"]
 	}
+	
+	def "Should return string with second, third, and fourth string joined together seperated by -"() {
+		
+	}
 
 }
