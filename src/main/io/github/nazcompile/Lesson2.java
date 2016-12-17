@@ -78,12 +78,12 @@ public class Lesson2 {
 	/**
 	 * Count the number of lines in the file using the BufferedReader provided
 	 */
-	public int exercise4() throws IOException {
-		int result = 0;
+	public long exercise4() throws IOException {
+		long result = 0;
 		try (BufferedReader reader = Files.newBufferedReader(
 											Paths.get("Sonnet.txt"), 
 											StandardCharsets.UTF_8)) {
-			/* YOUR CODE HERE */
+			result = reader.lines().count();
 		}
 		return result;
 	}
