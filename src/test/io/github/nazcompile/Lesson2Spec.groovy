@@ -47,9 +47,9 @@ class Lesson2Spec extends Specification {
 		
 		where:
 			list						|		expected
-			["one", "two", "three", "four", "five"]	|	"two-three-four"
-			["a", "b", "c", "d"]	|	"b-c-d"
-			["1", "2"]		|	"List should be greater than 4"
+			["one", "two", "three", "four", "five"]		|	"two-three-four"
+			["a", "b", "c", "d"]				|	"b-c-d"
+			["1", "2"]					|	"List should be greater than 4"
 	}
 
 }
