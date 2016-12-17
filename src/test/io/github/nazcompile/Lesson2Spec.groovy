@@ -40,7 +40,7 @@ class Lesson2Spec extends Specification {
 	
 	def "Should return string with second, third, and fourth string joined together seperated by -"() {
 		when:
-		def result = lesson2.exercise3(list)
+			def result = lesson2.exercise3(list)
 	
 		then:
 			result == expected
@@ -50,6 +50,11 @@ class Lesson2Spec extends Specification {
 			["one", "two", "three", "four", "five"]		|	"two-three-four"
 			["a", "b", "c", "d"]				|	"b-c-d"
 			["1", "2"]					|	"List should be greater than 4"
+	}
+	
+	def "should return correct number of linex in text file"() {
+		expect:
+			lesson2.exercise4() == 14
 	}
 
 }

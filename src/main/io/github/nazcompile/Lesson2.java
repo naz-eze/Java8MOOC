@@ -1,5 +1,10 @@
 package io.github.nazcompile;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -69,6 +74,19 @@ public class Lesson2 {
 	    System.out.println(result);
 	    return result;
 	  }
+	  
+	/**
+	 * Count the number of lines in the file using the BufferedReader provided
+	 */
+	public int exercise4() throws IOException {
+		int result = 0;
+		try (BufferedReader reader = Files.newBufferedReader(
+											Paths.get("Sonnet.txt"), 
+											StandardCharsets.UTF_8)) {
+			/* YOUR CODE HERE */
+		}
+		return result;
+	}
 
 
 }
