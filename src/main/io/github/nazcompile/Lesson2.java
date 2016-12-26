@@ -101,8 +101,8 @@ public class Lesson2 {
 		List<String> result = null;
 		
 		try (BufferedReader reader = Files.newBufferedReader(
-											Paths.get("Sonnet.txt"), 
-											StandardCharsets.UTF_8)) {
+						Paths.get("Sonnet.txt"), 
+						StandardCharsets.UTF_8)) {
 			result = reader.lines()
 				.map(String::toLowerCase)
 				.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
@@ -112,6 +112,28 @@ public class Lesson2 {
 		System.out.println(result);
 		return result;
 	}
+	
+	 /**
+	 * Using the BufferedReader to access the file create a list of words from
+	 * the file, converted to lower-case and with duplicates removed, which is
+	 * sorted by natural order. Print the contents of the list.
+	 */
+	public List<String> exercise6() throws IOException {
+		List<String> result = null;
 
+		try (BufferedReader reader = Files.newBufferedReader(
+						Paths.get("Sonnet.txt"), 
+						StandardCharsets.UTF_8)) {
+
+			result = reader.lines()
+				.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+				.map(String::toLowerCase)
+				.distinct()
+				.sorted()
+				.collect(Collectors.toList());
+		}
+		System.out.println(result);
+		return result;
+	}
 
 }

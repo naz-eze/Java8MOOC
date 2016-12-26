@@ -64,5 +64,14 @@ class Lesson2Spec extends Specification {
 				 'die', 'but', 'as', 'the', 'riper', 'should', 'by', 'time', 'decease',
 				 'his', 'tender', 'heir', 'bear', 'memory'] 
 	}
+	
+	def "should return list of words with no duplicates in the file, sorted by natural order"() {
+		expect:
+			lesson2.exercise6() == ['as', 'bear', "beauty's", 'but', 'by', 'creatures', 'decease', 'desire',
+					'die', 'fairest', 'from', 'heir', 'his', 'increase', 'memory', 'might', 'never', 
+					'riper', 'rose', 'should', 'tender', 'that', 'the', 'thereby', 'time', 'we']
+
+	}
+
 
 }
