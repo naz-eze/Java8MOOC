@@ -54,7 +54,15 @@ class Lesson2Spec extends Specification {
 	
 	def "should return correct number of linex in text file"() {
 		expect:
-			lesson2.exercise4() == 14
+			lesson2.exercise4() == 4
+	}
+	
+	def "should return list of words with no duplicates in the file"() {
+		expect:
+			lesson2.exercise5() == ['from', 'fairest', 'creatures', 'we', 'desire', 
+				 'increase', 'that', 'thereby', "beauty's", 'rose', 'might', 'never', 
+				 'die', 'but', 'as', 'the', 'riper', 'should', 'by', 'time', 'decease',
+				 'his', 'tender', 'heir', 'bear', 'memory'] 
 	}
 
 }

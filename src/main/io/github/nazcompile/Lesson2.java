@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Lesson2 {
 	
@@ -16,6 +17,8 @@ public class Lesson2 {
 	 * explicit loop in any of the code. Use method references rather than full
 	 * lambda expressions wherever possible.
 	 */
+	
+	  private static final String WORD_REGEXP = "[- .:,]+";
 	
 	  /**
 	   * Exercise 1
@@ -81,10 +84,32 @@ public class Lesson2 {
 	public long exercise4() throws IOException {
 		long result = 0;
 		try (BufferedReader reader = Files.newBufferedReader(
-											Paths.get("Sonnet.txt"), 
-											StandardCharsets.UTF_8)) {
+						Paths.get("Sonnet.txt"), 
+						StandardCharsets.UTF_8)) {
 			result = reader.lines().count();
 		}
+		return result;
+	}
+	
+	/**
+	   * Using the BufferedReader to access the file, create a list of words with
+	   * no duplicates contained in the file.  Print the words.
+	   * 
+	   * HINT: A regular expression, WORD_REGEXP, is already defined for your use.
+	   */
+	public List<String> exercise5() throws IOException {
+		List<String> result = null;
+		
+		try (BufferedReader reader = Files.newBufferedReader(
+											Paths.get("Sonnet.txt"), 
+											StandardCharsets.UTF_8)) {
+			result = reader.lines()
+				.map(String::toLowerCase)
+				.flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+				.distinct()
+				.collect(Collectors.toList());
+		}
+		System.out.println(result);
 		return result;
 	}
 
