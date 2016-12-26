@@ -135,5 +135,25 @@ public class Lesson2 {
 		System.out.println(result);
 		return result;
 	}
+	
+	  /**
+	   * Modify exercise6 so that the words are sorted by length
+	   */
+	public List<String> exercise7() throws IOException {
+		List<String> result = null;
+	    try (BufferedReader reader = Files.newBufferedReader(
+			    		Paths.get("Sonnet.txt"), 
+						StandardCharsets.UTF_8)) {
 
+	      result = reader.lines()
+	          .flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+	          .map(String::toLowerCase)
+	          .distinct()
+	          .sorted((a, b) -> a.length() - b.length())
+	          .collect(Collectors.toList());
+	    }
+	    
+		System.out.println(result);
+		return result;
+	  }
 }

@@ -72,6 +72,14 @@ class Lesson2Spec extends Specification {
 					'riper', 'rose', 'should', 'tender', 'that', 'the', 'thereby', 'time', 'we']
 
 	}
+	
+	def "should return list of words with no duplicates in the file, sorted by length"() {
+		expect:
+			lesson2.exercise7() == ['we', 'as', 'by', 'die', 'but', 'the', 'his', 'from', 'that',
+					'rose', 'time', 'heir', 'bear', 'might', 'never', 'riper', 'desire', 'should',
+					'tender', 'memory', 'fairest', 'thereby', 'decease', 'increase', "beauty's", 'creatures']
+	
+	}
 
 
 }
